@@ -1,6 +1,8 @@
 
-import java.sql.SQLOutput;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CountDownLatch;
 
@@ -31,6 +33,19 @@ public class Main {
         System.out.println("Время выполнения на примитивах, нс: " + FillingMap0Time
                 + "\nВремя выполнения на коллекциях, нс: " + FillingMap1Time
                 + "\nВремя выполнения на потоках, нс: " + FillingMap2Time);
+
+
+// TODO результата
+//        Р : [Россомаха]
+//        С : [Собака]
+//        Д : [Дети]
+//        К : [Кот]
+//        Л : [Лев]
+//        М : [Медоед, Медведь]
+//
+//        Время выполнения на примитивах, нс: 475432
+//        Время выполнения на коллекциях, нс: 2032028
+//        Время выполнения на потоках, нс: 2879969
 
     }
 
@@ -141,6 +156,7 @@ public class Main {
             }
             countDownLatch.await();
             long endTime = System.nanoTime();
+//            TODO раскомментировать, если нужен результат
 //            System.out.println("время выполнения FillingMap_2, нс: "
 //                    + (endTime - startTime));
             map.forEach((i, value) -> {
